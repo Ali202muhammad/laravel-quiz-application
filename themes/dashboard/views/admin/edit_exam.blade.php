@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Edit Exam</h1>
+            <h1 class="m-0">Edit KT</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Edit Category</li>
+              <li class="breadcrumb-item active">Edit Department</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -53,7 +53,7 @@
                           </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="">Select category</label>
+                                    <label for="">Select Department</label>
                                     <select class="form-control" required="required" name="exam_category">
                                         <option value="">Select</option>
                                         @foreach ($category as $cat)

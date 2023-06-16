@@ -15,7 +15,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Exam</li>
+              <li class="breadcrumb-item active">KT</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -32,7 +32,7 @@
                 <div class="card mt-4">
                     
                     <div class="card-body">
-                        <h2>Student information</h2>
+                        <h2>User information</h2>
                         <table class="table">
                             <tr>
                                 <td>Name : </td>
@@ -47,11 +47,11 @@
                                 <td>{{ $student_info->dob}}</td>
                             </tr> --}}
                             <tr>
-                                <td>Exam name : </td>
+                                <td>KT name : </td>
                                 <td>{{ $exam_info->title}}</td>
                             </tr>
                             <tr>
-                                <td>Exam date : </td>
+                                <td>KT date : </td>
                                 <td>{{ $exam_info->exam_date}}</td>
                             </tr>
                         </table>

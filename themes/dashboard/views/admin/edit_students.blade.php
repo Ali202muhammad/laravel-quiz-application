@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Edit Students</h1>
+            <h1 class="m-0">Edit Users</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Manage Exam</li>
+              <li class="breadcrumb-item active">Manage KTs</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -63,7 +63,7 @@
                             </div> --}}
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="">Select exam</label>
+                                    <label for="">Select KT</label>
                                     <select class="form-control" required="required" name="exam">
                                         <option value="">Select</option>
                                         @foreach ($exams as $exam)

@@ -6,7 +6,7 @@
                     {{-- <div class="card-header">{{ __('Login') }}</div> --}}
 
                     <div class="card-body">
-                        <h1 class="text-center">Student Login</h1>
+                        <h1 class="text-center">User Login</h1>
                         <form method="POST" action="{{ route('login') }}" class="mt-4">
                             @csrf
 

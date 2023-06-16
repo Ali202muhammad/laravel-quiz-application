@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Category</h1>
+            <h1 class="m-0">Department</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Category</li>
+              <li class="breadcrumb-item active">Department</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -77,7 +77,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Add new category</h4>
+          <h4 class="modal-title">Add new Department</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -85,9 +85,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="">Enter category name</label>
+                            <label for="">Enter Department name</label>
                             {{ csrf_field()}}
-                            <input type="text" required="required" name="name" placeholder="Enter category name" class="form-control">
+                            <input type="text" required="required" name="name" placeholder="Enter Department name" class="form-control">
                         </div>
                     </div>
                     <div class="col-sm-12">

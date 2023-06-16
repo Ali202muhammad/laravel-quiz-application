@@ -6,7 +6,7 @@
                     {{-- <div class="card-header">{{ __('Register') }}</div> --}}
 
                     <div class="card-body">
-                        <h1 class="text-center">Student Register</h1>
+                        <h1 class="text-center">User Register</h1>
                         <form method="POST" action="{{ route('register') }}" class="mt-4">
                             @csrf
 
@@ -52,11 +52,24 @@
                                 </div>
                             </div>
 
+
                             <div class="form-group row">
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+
+                                <div class="col-md-6 form-group row">
+                                    <select name="Department" required>
+                                        <option value="">Select Cat</option>    
+                                        @foreach ($categories as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>    
+                                            @endforeach 
+                                    </select>    
                                 </div>
                             </div>
 

@@ -9,7 +9,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">All exams</h1>
+            <h1 class="m-0">All KTs</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -55,7 +55,7 @@
                   <h3>{{ $exam['title']}}</h3>
   
                   <p>{{ $exam['cat_name']}}</p>
-                  <p>Exam date : {{$exam['exam_date']}}</p>
+                  <p>KT date : {{$exam['exam_date']}}</p>
                   </div>
                   <div class="icon">
                   <i class="ion ion-bag"></i>

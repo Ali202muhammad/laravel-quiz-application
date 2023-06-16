@@ -10,16 +10,22 @@ use App\Models\Oex_question_master;
 use App\Models\Oex_result;
 use App\Models\User;
 use App\Models\user_exam;
+use Illuminate\Support\Facades\Auth;
 
 class StudentOperation extends Controller
 {
     //student dashboard
     public function dashboard(){
         
-        $data['portal_exams']=Oex_exam_master::select(['oex_exam_masters.*','oex_categories.name as cat_name'])
-        ->join('oex_categories','oex_exam_masters.category','=','oex_categories.id')
-        ->orderBy('id','desc')->where('oex_exam_masters.status','1')->get()->toArray();
-        return view('student.dashboard',$data);
+        $data['portal_exams'] = Oex_exam_master::select(['oex_exam_masters.*', 'oex_categories.name as cat_name'])
+        ->join('oex_categories', 'oex_exam_masters.category', '=', 'oex_categories.id')
+        ->join('users', 'users.cat_id', '=', 'oex_categories.id')
+        ->orderBy('oex_exam_masters.id', 'desc')
+        ->where('oex_exam_masters.status', '1')
+        ->get()
+        ->toArray();
+        
+    return view('student.dashboard', $data);
     }
 
 

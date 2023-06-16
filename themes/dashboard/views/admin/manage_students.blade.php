@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Manage Students</h1>
+            <h1 class="m-0">Manage Users</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -41,8 +41,8 @@
                                 <th>#</th>
                                 <th>Name</th>
                                 {{-- <th>DOB</th> --}}
-                                <th>Exam</th>
-                                <th>Exam Date</th>
+                                <th>KT</th>
+                                <th>KT Date</th>
                                 <th>Result</th>
                                 <th>status</th>
                                 <th>Actions</th>
@@ -97,7 +97,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Add new Student</h4>
+          <h4 class="modal-title">Add New User</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -132,7 +132,7 @@
                     </div> --}}
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="">Select exam</label>
+                            <label for="">Select KT</label>
                             <select class="form-control" required="required" name="exam">
                                 <option value="">Select</option>
                                 @foreach ($exams as $exam)

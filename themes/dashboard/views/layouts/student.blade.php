@@ -36,7 +36,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{url('assets/dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="{{url('assets/dist/img/logo-homepage.png')}}" alt="AdminLTELogo" height="60" width="90">
   </div>
 
   <!-- Navbar -->
@@ -48,9 +48,6 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -98,8 +95,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <span class="brand-text font-weight-light">Online Examination</span>
+    <a class="brand-link">
+      <span class="brand-text font-weight-light">Online KT Portal</span>
     </a>
 
     <!-- Sidebar -->
@@ -136,7 +133,7 @@
                 <a href="{{ url('student/exam')}}" class="nav-link">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                    Exam
+                    KT
                     </p>
                 </a>
             </li> 
@@ -154,7 +151,7 @@
           
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
+      <!-*- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>

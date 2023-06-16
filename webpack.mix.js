@@ -17,5 +17,5 @@ const mix = require('laravel-mix');
     require(`${__dirname}/themes/${theme}/webpack.mix.js`);
  } else {
      // default theme to compile if theme is not specified
-   require(`${__dirname}/themes/theme-name/webpack.mix.js`);
+   require(`${__dirname}/themes/student/webpack.mix.js`);
  }

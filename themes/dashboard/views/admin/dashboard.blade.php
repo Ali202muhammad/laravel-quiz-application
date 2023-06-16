@@ -35,7 +35,7 @@
               <div class="inner">
                 <h3>{{ $student}}</h3>
 
-                <p>Total students</p>
+                <p>Total Users</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -64,16 +64,16 @@
               <div class="inner">
                 <h3>{{ $exam}}</h3>
 
-                <p>Exams</p>
+                <p>KTs</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
             </div>
           </div>
-          <!-- ./col -->
+          <!-- ./col
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>65</h3>
@@ -85,7 +85,7 @@
               </div>
             </div>
           </div>
-          <!-- ./col -->
+           ./col -->
         </div>
       <!-- /.content -->
   </div>

@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Manage Exam</h1>
+            <h1 class="m-0">Manage KT</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Manage Exam</li>
+              <li class="breadcrumb-item active">Manage KT</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -40,8 +40,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Title</th>
-                                <th>Category</th>
-                                <th>Exam Date</th>
+                                <th>Department</th>
+                                <th>KT Date</th>
                                 <th>Status</th>
                                 <th>Actions</th>
                             </tr>
@@ -84,7 +84,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Add new Exam</h4>
+          <h4 class="modal-title">Add new KT</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -111,7 +111,7 @@
                   </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="">Select category</label>
+                            <label for="">Select Department</label>
                             <select class="form-control" required="required" name="exam_category">
                                 <option value="">Select</option>
                                 @foreach ($category as $cat)

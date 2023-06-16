@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Etisalat KT Portal</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -42,10 +42,10 @@
         </div> --}}
 
         <header id="header-section">
-            <nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+          <nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar" style="padding: 0px 0px 0px 0px !important">
             <div class="container">
               <div class="navbar-brand-wrapper d-flex w-100">
-                <img src="{{ url('assets/images/Group2.svg')}}" alt="">
+                <img src="{{ url('assets/images/e&logo.png')}}" alt="" width="130" height="100">
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="mdi mdi-menu navbar-toggler-icon"></span>
                 </button> 
@@ -70,11 +70,11 @@
           </header>
           <div class="banner" >
             <div class="container">
-              <h1 class="font-weight-semibold">Welcome to online quiz application</h1>
-              <h6 class="font-weight-normal text-muted pb-3">Create and take students assesment tests in very reliable and fast way</h6>
+              <h1 class="font-weight-semibold">Welcome to Etisalat Knowledge Test Portal</h1>
+              <h6 class="font-weight-normal text-muted pb-3">Developed by Etisalat Business Care Team</h6>
               <div>
-                      <a href="{{ url('/login') }}" class="btn btn-opacity-light mr-1"><b>Student Login</b></a>
-                      <a href="{{ route('register') }}"class="btn btn-opacity-success ml-1"><b>Student Register</b></a>
+                      <a href="{{ url('/login') }}" class="btn btn-opacity-light mr-1"><b>User Login</b></a>
+                      <a href="{{ route('register') }}"class="btn btn-opacity-success ml-1"><b>User Register</b></a>
                  
               </div>
               <img src="{{ url('assets/images/Group171.svg')}}" alt="" class="img-fluid">

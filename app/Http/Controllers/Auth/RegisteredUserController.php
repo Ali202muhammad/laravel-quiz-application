@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use App\Models\Oex_category;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -21,7 +21,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $categories = Oex_category::all();
+        return view('auth.register', compact('categories'));
     }
 
     /**
@@ -34,6 +35,8 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        /*dd($request);*/
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -44,6 +47,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'cat_id' => $request->Department,
         ]));
 
         event(new Registered($user));

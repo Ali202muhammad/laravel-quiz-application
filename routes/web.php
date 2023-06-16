@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StudentOperation;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\mycontroller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ExamResultsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,6 +95,11 @@ Route::prefix('student')->middleware('theme:dashboard')->name('student.')->group
 
     
 });
+
+Route::get('importExportView', [mycontroller::class, 'importExportView']);
+Route::get('export', [mycontroller::class, 'index'])->name('export');
+Route::post('import', [mycontroller::class, 'import'])->name('import');
+Route::get('/download-exam-results/{examId}', [ExamResultsController::class, "download"])->name('download-exam-results');
 
 
 

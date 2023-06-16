@@ -63,21 +63,27 @@ class StudentOperation extends Controller
         $yes_ans=0;
         $no_ans=0;
         $data= $request->all();
+        // dd($data);
         $result=array();
-        for($i=1;$i<=$request->index;$i++){
+        for ($i = 1; $i <= $request->index; $i++) {
+            if (isset($data['question' . $i])) {
+                $q = Oex_question_master::find($data['question' . $i]);
 
-            if(isset($data['question'.$i])){
-                    $q=Oex_question_master::where('id',$data['question'.$i])->get()->first();
-
-                    if($q->ans==$data['ans'.$i]){
-                        $result[$data['question'.$i]]='YES';
+                if ($q) {
+                    if ($q->ans == $data['ans' . $i]) {
+                        $result[$data['ans' . $i]] = $data['ans' . $i] + 1;
                         $yes_ans++;
-                    }else{
-                        $result[$data['question'.$i]]='NO';
+                    } else {
+                        $result[$data['ans' . $i]] = $data['ans' . $i] + 1 ;
                         $no_ans++;
                     }
+                }
             }
         }
+
+        $keys = array_keys($result);
+        // $keyList = implode(", ", $keys);
+        // dd($keyList);
     
        $std_info = user_exam::where('user_id',Session::get('id'))->where('exam_id',$request->exam_id)->get()->first();
        $std_info->exam_joined=1;
@@ -89,7 +95,7 @@ class StudentOperation extends Controller
        $res->user_id = Session::get('id');
        $res->yes_ans=$yes_ans;
        $res->no_ans=$no_ans;
-       $res->result_json=json_encode($result);
+       $res->result_json=json_encode($keys);
 
        echo $res->save();
        return redirect(url('student/exam'));

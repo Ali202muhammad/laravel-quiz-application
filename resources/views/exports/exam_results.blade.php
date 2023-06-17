@@ -9,8 +9,8 @@
     <tbody>
         @foreach ($results as $result)
             <tr>
-                @foreach ($result as $item)
-                    <td>{{ $item }}</td>
+                @foreach ($result as $value)
+                    <td>{{ $value }}</td>
                 @endforeach
             </tr>
         @endforeach

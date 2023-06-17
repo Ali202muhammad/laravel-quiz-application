@@ -52,7 +52,7 @@
                             </tr>
                             <tr>
                                 <td>KT date : </td>
-                                <td>{{ $exam_info->exam_date}}</td>
+                                <td>{{ $exam_info->start_date}}</td>
                             </tr>
                         </table>
                         <h2>Result info</h2>

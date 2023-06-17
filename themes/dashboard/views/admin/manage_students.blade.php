@@ -55,7 +55,7 @@
                                   <td>{{ $std['name']}}</td>
                                   {{-- <td>{{ $std['dob']}}</td> --}}
                                   <td>{{ $std['ex_name']}}</td>
-                                  <td>{{ $std['exam_date']}}</td>
+                                  <td>{{ $std['start_date']}}</td>
                                   <td>
                                     <?php 
                                     if($std['exam_joined']==1){

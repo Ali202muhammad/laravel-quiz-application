@@ -1,54 +1,29 @@
 <?php
-
-namespace App\Exports;
-use Illuminate\Contracts\View\View;
-use Maatwebsite\Excel\Concerns\FromView;
-use Maatwebsite\Excel\Concerns\WithMapping;
+namespace App\Exports;use Maatwebsite\Excel\Concerns\FromView;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Illuminate\Contracts\View\View;
 
-
-use Maatwebsite\Excel\Concerns\FromCollection;
-
-class ExamResultsExport implements FromView, WithMapping, WithHeadings
+class ExamResultsExport implements FromView, WithHeadings
 {
-    protected $results;
+    private $results;
+    private $headings;
 
-    public function __construct($results)
+    public function __construct($results, $headings)
     {
         $this->results = $results;
+        $this->headings = $headings;
     }
 
     public function view(): View
     {
-        return view('exports.exam-results', [
+        return view('exports.exam_results', [
             'results' => $this->results,
-            'headings' => $this->headings()
+            'headings' => $this->headings,
         ]);
-    }
-
-    public function map($result): array
-    {
-        return [
-            $result->username,
-            $result->exam_name,
-            $result->name,
-            $result->questions,
-            $result->ans,
-            $result->options,
-            $result->result_json,
-        ];
     }
 
     public function headings(): array
     {
-        return [
-            'User Name',
-            'Exam Name',
-            'Department Name',
-            'Question',
-            'Answers',
-            'Selected Option',
-            'Results',
-        ];
+        return $this->headings;
     }
 }

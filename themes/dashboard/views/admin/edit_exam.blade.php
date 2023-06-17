@@ -41,10 +41,16 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="">Enter Date</label>
-                                    <input type="date" required="required"  value="{{ $exam->exam_date}}" name="exam_date"  class="form-control">
+                                    <label for="">Start Date</label>
+                                    <input type="date" required="required"  value="{{ $exam->start_date}}" name="start_date"  class="form-control">
                                 </div>
                             </div>
+                            <div class="col-sm-12">
+                              <div class="form-group">
+                                  <label for="">End Date</label>
+                                  <input type="date" required="required"  value="{{ $exam->end_date}}" name="end_date"  class="form-control">
+                              </div>
+                          </div>
                             <div class="col-sm-12">
                               <div class="form-group">
                                   <label for="">Enter Time(in minutes)</label>

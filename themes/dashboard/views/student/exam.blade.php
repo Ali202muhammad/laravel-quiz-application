@@ -34,7 +34,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>KT title</th>
-                                <th>KT date</th>
+                                <th>KT Start date</th>
+                                <th>KT End date</th>
                                 <th>Status</th>
                                 <th>Result</th>
                                 <th>Actions</th>
@@ -47,11 +48,12 @@
                             <tr>
                               <td>1</td>
                               <td>{{ $std_info['title']}}</td>
-                              <td>{{ $std_info['exam_date']}}</td>
+                              <td>{{ $std_info['start_date']}}</td>
+                              <td>{{ $std_info['end_date']}}</td>
                               <td><?php 
-                                if(strtotime($std_info['exam_date']) < strtotime(date('Y-m-d'))){
+                                if(strtotime($std_info['end_date']) < strtotime(date('Y-m-d'))){
                                   echo "Date expired";
-                                }elseif (strtotime($std_info['exam_date']) == strtotime(date('Y-m-d'))) {
+                                }elseif (strtotime($std_info['end_date']) == strtotime(date('Y-m-d'))) {
                                       if($std_info['exam_joined']==1){
                                         echo "Finished";
                                       }else{
@@ -75,7 +77,7 @@
                              
                               <td>
                                   <?php 
-                                  if(strtotime($std_info['exam_date']) == strtotime(date('Y-m-d'))){
+                                  if(strtotime($std_info['end_date']) > strtotime(date('Y-m-d'))){
                                     if($std_info['exam_joined']==0){
 
                                   ?>

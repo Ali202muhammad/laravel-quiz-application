@@ -13,5 +13,5 @@ class Oex_exam_master extends Model
 
     protected $primaryKey="id";
 
-    protected $fillable=['title','category','exam_date','status','exam_duration'];
+    protected $fillable=['title','category','start_date', 'end_date','status','exam_duration'];
 }

@@ -34,8 +34,8 @@
          
           @foreach ($portal_exams as $key=>$exam)
           <?php 
-              
-              if(strtotime(date('Y-m-d')) > strtotime($exam['exam_date']))
+              // dd([date('Y-m-d'), $exam['end_date']]);
+              if(strtotime(date('Y-m-d')) > strtotime($exam['end_date']))
               {
                   $cls="bg-danger";
               }
@@ -55,12 +55,12 @@
                   <h3>{{ $exam['title']}}</h3>
   
                   <p>{{ $exam['cat_name']}}</p>
-                  <p>KT date : {{$exam['exam_date']}}</p>
+                  <p>KT date : {{$exam['start_date']}}</p>
                   </div>
                   <div class="icon">
                   <i class="ion ion-bag"></i>
                   </div>
-                  @if (strtotime(date('Y-m-d')) <= strtotime($exam['exam_date']))
+                  @if (strtotime(date('Y-m-d')) <= strtotime($exam['end_date']))
                       
                       <a data-id="{{ $exam['id']}}"  class="apply_exam small-box-footer">Apply<i class="fas fa-arrow-circle-right"></i></a>
             

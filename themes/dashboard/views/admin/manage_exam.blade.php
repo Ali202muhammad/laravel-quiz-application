@@ -52,7 +52,7 @@
                                    <td>{{ $key+1}}</td>
                                    <td>{{ $exam['title']}}</td>
                                    <td>{{ $exam['cat_name']}}</td>
-                                   <td>{{ $exam['exam_date']}}</td>
+                                   <td>{{ $exam['start_date']}}</td>
                                    <td><input type="checkbox" class="exam_status" data-id="{{ $exam['id']}}" <?php if($exam['status']==1){ echo "checked";} ?> name="status"></td>
                                    <td>
                                        <a href="{{ url('admin/edit_exam/'.$exam['id'])}}" class="btn btn-info">Edit</a>
@@ -99,10 +99,16 @@
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="">Enter Date</label>
-                            <input type="date" required="required" name="exam_date"  class="form-control">
+                            <label for="">Start Date</label>
+                            <input type="date" required="required" name="start_date"  class="form-control">
                         </div>
                     </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                          <label for="">End Date</label>
+                          <input type="date" required="required" name="end_date"  class="form-control">
+                      </div>
+                  </div>
                     <div class="col-sm-12">
                       <div class="form-group">
                           <label for="">Enter duration (in minutes)</label>

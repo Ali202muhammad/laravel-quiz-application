@@ -22,8 +22,10 @@ class StudentOperation extends Controller
         ->join('users', 'users.cat_id', '=', 'oex_categories.id')
         ->orderBy('oex_exam_masters.id', 'desc')
         ->where('oex_exam_masters.status', '1')
+        ->distinct()
         ->get()
         ->toArray();
+        // dd($data['portal_exams']);
         
     return view('student.dashboard', $data);
     }
@@ -33,12 +35,13 @@ class StudentOperation extends Controller
     public function exam(){
 
 
-            $student_info = user_exam::select(['user_exams.*','users.name','oex_exam_masters.title','oex_exam_masters.exam_date'])
+            $student_info = user_exam::select(['user_exams.*','users.name','oex_exam_masters.title','oex_exam_masters.start_date', 'oex_exam_masters.end_date'])
             ->join('users','users.id','=','user_exams.user_id')
             ->join('oex_exam_masters','user_exams.exam_id','=','oex_exam_masters.id')->orderBy('user_exams.exam_id','desc')
             ->where('user_exams.user_id',Session::get('id'))
             ->where('user_exams.std_status','1')
             ->get()->toArray();
+            // dd($student_info);
             
             return view('student.exam',['student_info'=>$student_info]);
 

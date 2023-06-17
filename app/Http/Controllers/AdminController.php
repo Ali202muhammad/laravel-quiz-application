@@ -115,7 +115,7 @@ class AdminController extends Controller
 
     //Adding new exam page
     public function add_new_exam(Request $request){
-            $validator = Validator::make($request->all(),['title'=>'required','exam_date'=>'required','exam_category'=>'required',
+            $validator = Validator::make($request->all(),['title'=>'required','start_date'=>'required','exam_category'=>'required',
             'exam_duration'=>'required']);
 
             if($validator->fails()){
@@ -125,7 +125,8 @@ class AdminController extends Controller
                 
                 $exam = new Oex_exam_master();
                 $exam->title = $request->title;
-                $exam->exam_date = $request->exam_date;
+                $exam->start_date = $request->start_date;
+                $exam->end_date = $request->end_date;
                 $exam->exam_duration = $request->exam_duration;
                 $exam->category = $request->exam_category;
                 $exam->status = 1;
@@ -180,7 +181,8 @@ class AdminController extends Controller
 
         $exam = Oex_exam_master::where('id',$request->id)->get()->first();
         $exam->title = $request->title;
-        $exam->exam_date = $request->exam_date;
+        $exam->start_date = $request->start_date;
+        $exam->end_date = $request->end_date;
         $exam->category = $request->exam_category;
         $exam->exam_duration = $request->exam_duration;
 
@@ -196,7 +198,7 @@ class AdminController extends Controller
     public function manage_students(){
 
         $data['exams']=Oex_exam_master::where('status','1')->get()->toArray();
-        $data['students'] = user_exam::select(['user_exams.*','users.name','oex_exam_masters.title as ex_name','oex_exam_masters.exam_date'])
+        $data['students'] = user_exam::select(['user_exams.*','users.name','oex_exam_masters.title as ex_name','oex_exam_masters.start_date'])
             ->join('users','users.id','=','user_exams.user_id')
             ->join('oex_exam_masters','user_exams.exam_id','=','oex_exam_masters.id')->orderBy('user_exams.exam_id','desc')
             ->get()->toArray();
